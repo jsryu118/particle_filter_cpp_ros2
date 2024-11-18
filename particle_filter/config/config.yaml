@@ -1,0 +1,32 @@
+# config.yaml
+particle_filter:
+  ros__parameters:
+    map_topic: "/pf_map"
+    scan_topic: "/scan"
+    vesc_odometry_topic: "/vesc/odom"
+    imu_odometry_topic: "/imu/odom"
+    odom_faster_than_lidar: true
+    no_initial_guess: false
+    angle_step: 18
+    max_particles: 4000
+    max_viz_particles: 60
+    squash_factor: 2.2
+    max_range: 10.0
+    theta_discretization: 112
+    range_method: "cddt"
+    rangelib_variant: 2
+    fine_timing: false
+    publish_odom: true
+    viz: true
+    z_short: 0.01
+    z_max: 0.07
+    z_rand: 0.12
+    z_hit: 0.75
+    sigma_hit: 8.0
+    motion_dispersion_x: 0.05
+    motion_dispersion_y: 0.025
+    motion_dispersion_theta: 0.25
+    initialize_pose_sigma_x: 0.5
+    initialize_pose_sigma_y: 0.5
+    initialize_pose_sigma_yaw: 0.4
+    odom_idx: 0
