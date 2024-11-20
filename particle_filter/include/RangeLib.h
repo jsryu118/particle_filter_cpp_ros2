@@ -1092,7 +1092,7 @@ namespace ranges {
 					// if (map.isOccupied(x,y)) {
 						if (edge_map.isOccupied(x,y)) {
 						// this (x,y) is occupied, so add it to the datastruture
-						std::pair<float, float> pixel_center =  std::make_pair(x + 0.5, y + 0.5);
+						std::pair<float, float> pixel_center(x + 0.5f, y + 0.5f);
 						for (int a = 0; a < theta_discretization / 2.0; ++a) {
 							#if _USE_CACHED_TRIG == 1
 							float cosangle = cos_values[a];

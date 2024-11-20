@@ -17,6 +17,7 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(gflags REQUIRED)
 find_package(lifecycle_msgs REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 
 # Include 디렉토리 설정
@@ -42,7 +43,7 @@ target_include_directories(lodepng PUBLIC vendor/lodepng)
 
 # range_lib 라이브러리 추가
 add_library(range_lib ${SRCS})
-ament_target_dependencies(range_lib rclcpp sensor_msgs std_msgs nav_msgs geometry_msgs tf2 tf2_ros gflags)
+ament_target_dependencies(range_lib rclcpp sensor_msgs std_msgs nav_msgs tf2_geometry_msgs lifecycle_msgs geometry_msgs tf2 tf2_ros gflags)
 target_link_libraries(range_lib lodepng)
 
 # Particle Filter 노드 추가
